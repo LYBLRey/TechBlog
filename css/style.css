@@ -1,0 +1,81 @@
+body {
+  background-color: #09192f;
+  color: #8892b0;
+}
+
+header,
+.project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+.dollar-amount {
+  color: #056605;
+  font-weight: bold;
+  margin-left: -5px;
+}
+
+.whitespace {
+  white-space: pre-wrap;
+}
+
+/* Modal Login */
+
+/* artilepage */
+
+.comment {
+  font-size: 10px;
+}
+
+/* Link Coluor */
+.names {
+  color: #ccd6f6;
+}
+
+.links {
+  color: #3c9a8f;
+}
+
+li {
+  display: inline;
+}
+
+html,
+  
+  /* Bulma full page */
+  
+  body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body > footer {
+  margin-top: auto;
+}
+
+/* Footer Logo */
+footer {
+  margin: 0 auto;
+}
+
+footer a img {
+  height: 20px;
+  width: 20px;
+}
+.footer-name {
+  padding-bottom: 10px;
+}

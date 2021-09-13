@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, <span class="names">{{ article.user.name}}</span>!</h2>
+  </div>
+</div>
+
+{{ log user }}
+<div class="text-center">
+  <h2><span class="names">{{ article.name}}</span></h2>
+  <p class="names whitespace ">{{ article.content }}</p>
+  <p>Created by <span class="names">{{ article.user.name }}</span> on {{format_date article.date_created }} </p>
+
+{{#if logged_in }}
+<form class="review-form needs-validation">
+   <div>
+      <textarea class="review-textarea form-control" name="re-body"></textarea>
+   </div>
+   <div>
+      <button class="nav_btns links no-button button-add-review" type="submit">Add Comment</button>
+   </div>
+</form>
+<br>
+{{/if}}
+{{!-- If there are comments then display the comments --}}
+{{#if article.reviews }}
+<h5>Comments</h2>
+{{#each article.reviews }}
+<section class="comment">
+   <div class="meta">
+      <span class="names">@{{ user.name }}  </span><span class="names">{{format_date date_created}}</span>
+   </div>
+   <div class="text">
+   {{ comment }}
+   </div>
+</section>
+{{/each}}
+{{/if }}
+
+
+{{#if logged_in}}
+<script src="/js/review.js"></script>
+{{/if }}
